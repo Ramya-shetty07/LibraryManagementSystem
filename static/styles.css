@@ -1,0 +1,29 @@
+*{
+    margin : 0px;
+ }
+ #canvas{
+    width : 80%;
+    margin : auto;
+    height : 640px;
+    padding : 10px;
+ }
+ #form-body{
+    width : 379px;
+    height : 295px;
+    margin : auto;
+    padding : 15px;
+    border-radius : 5px; 
+    border : solid black;
+ }
+#heading{
+    text-align : center;
+    padding-top: 100px;    
+}
+.headings{
+   padding-left : 8px;
+   margin : 3px;
+}
+#trans-table{
+   height : 400px;
+}
+

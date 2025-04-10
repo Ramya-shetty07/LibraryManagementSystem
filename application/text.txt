@@ -1,0 +1,30 @@
+user - general
+
+id
+username
+password
+type - admin/general
+
+Books
+id
+book title
+author name
+user-id f key
+
+user ---- book one to many relationship
+
+user login - librarian
+           - user
+
+@app.route('/librarian', methods = ['GET','POST'])
+def librarian_login():
+    librarian = User.query.filter_by(type = "librarian").first()
+    return render_template("librarian_dashboard_home.html")
+
+@app.route('/user/<int:user_id>',methods = ['GET','POST'])
+def user(user_id):
+    user = User.query.get(user_id) 
+    books = user.bk
+    return render_template('user_dashboard_mybooks.html', u_name = user.username, books = books)
+
+
